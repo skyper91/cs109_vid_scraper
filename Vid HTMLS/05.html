@@ -1,0 +1,68 @@
+<html><head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8;">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="initial-scale=1.0">
+		<title>DCE Video Player</title>
+		<script type="text/javascript" src="javascript/swfobject.js"></script>
+		<script type="text/javascript" src="javascript/base.js"></script>
+		<script type="text/javascript" src="javascript/jquery.js"></script>
+		<script type="text/javascript" src="javascript/lunr.min.js"></script>
+		<!-- DCE additional js start -->
+		<script type="text/javascript" src="mh_dce_resources/js/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="resources/bootstrap/js/bootstrap.min.js"></script>
+		<!-- DCE additional js end -->
+		<!-- DCE adding require back in, UPV uses it to pull in dashjs -->
+		<script type="text/javascript" src="javascript/require.js"></script>
+		<script type="text/javascript" src="javascript/paella_player.js"></script>
+		<script type="text/javascript" src="javascript/app-index.js"></script>
+		<link rel="stylesheet" href="resources/bootstrap/css/bootstrap.slate.min.css" type="text/css" media="screen" charset="utf-8">
+		<!-- DCE additional css start -->
+		<link rel="stylesheet" href="mh_dce_resources/style/jquery-ui.min.css" type="text/css">
+		<link rel="stylesheet" href="resources/style/opencast_cs50.css" type="text/css">
+		<!-- DCE additional css end -->
+		<!-- DCE style_cs50.css as default paellaSkin, also set in config -->
+
+		<script>
+
+			// Sample implementation of the authentication URL callback.
+			// Put the callback name in config.json, auth.authCallbackName
+			function authenticationUrl(redirect) {
+				redirect = redirect ? "?redirect=" + encodeURIComponent(redirect): "";
+				return "https://www.upv.es/auth" + redirect;
+			}
+
+			// Sample implementation of the user data callback
+			// Put the callback name in config,json, auth.userDataCallbackName
+			function videoData(onSuccess) {
+				onSuccess({
+					permissions: {
+						canRead: true,
+						canContribute: false,
+						canWrite: false,
+						loadError: false,
+						isAnonymous: true
+					},
+					userData: {
+						username: 'anonymous',
+						name: 'Anonymous',
+						avatar: 'resources/images/default_avatar.png'
+					}
+				});
+			}
+
+			// Sample configuration to use this callbacks:
+			/*
+
+			 "auth":{
+			 	"authCallbackName":"authenticationUrl",
+			 	"userDataCallbackName":"videoData"
+			 }
+			 */
+		</script>
+	<link rel="stylesheet" href="resources/style/style_cs50.css" type="text/css" media="screen" charset="utf-8"></head>
+    <body id="body" onload="loadOpencastPaellaDCE('playerContainer');;">
+		<div id="playerContainer" style="display:block;width:100%">
+		<div id="playerContainer_videoContainer" style="position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; overflow: hidden;"><div id="playerContainer_videoContainer_container" style="position: relative; display: block; margin-left: auto; margin-right: auto; width: 508px; height: 286px; top: 0px;" role="main"><div id="overlayContainer" style="position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; overflow: hidden; z-index: 10;" role="main"></div><img id="playerContainer_videoContainer_bkg" style="position: relative; top: 0px; left: 0px; right: 0px; bottom: 0px; z-index: 0;" src="config/profiles/resources/slide_professor_paella.jpg" alt="" width="100%" height="100%"><video id="playerContainer_videoContainer_1" style="top: 18.4722%; left: 0.390625%; width: 65%; height: 65%; position: absolute; z-index: 1;" preload="auto" poster="https://da4w749qm6awt.cloudfront.net/engage-player/94e52a8d-6557-48c4-b003-b5ec84d2a1e2/attachment-5/presenter_delivery.jpg" playsinline="" webkit-playsinline=""><source src="https://da4w749qm6awt.cloudfront.net/engage-player/94e52a8d-6557-48c4-b003-b5ec84d2a1e2/745d8ecf-813f-4112-bc03-fbc16c052517/presenter_delivery.mp4" type="video/mp4"></video><video id="playerContainer_videoContainer_2" style="top: 33.4722%; left: 66.0156%; width: 33.75%; height: 33.75%; position: absolute; z-index: 1;" preload="auto" poster="https://da4w749qm6awt.cloudfront.net/engage-player/94e52a8d-6557-48c4-b003-b5ec84d2a1e2/attachment-9/presentation_delivery.jpg" playsinline="" webkit-playsinline=""><source src="https://da4w749qm6awt.cloudfront.net/engage-player/94e52a8d-6557-48c4-b003-b5ec84d2a1e2/cd0666e5-e65d-4c76-af27-eaa7d378cb3e/presentation_delivery.mp4" type="video/mp4"></video></div><div class="playButtonOnScreen" id="paella_plugin_PlayButtonOnScreen" style="width: 100%; height: 100%;"><canvas class="playButtonOnScreenIcon" width="1301" height="286"></canvas></div></div></div>
+
+
+<div id="paellaPlayer_loader" style="position: fixed; background-color: white; opacity: 0.7; top: 0px; left: 0px; right: 0px; bottom: 0px; z-index: 10000; display: none;"><div id="" style="position: fixed; width: 128px; height: 128px; top: 50%; left: 50%; margin-left: -64px; margin-top: -64px; background-image: url(&quot;resources/images/loader.png&quot;); background-position: -5376px center;"></div></div></body></html>

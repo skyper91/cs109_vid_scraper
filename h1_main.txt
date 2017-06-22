@@ -1,0 +1,1666 @@
+<body>
+  <!-- Distance Education Header and banner  -->
+  <div id="header-banner" data-ng-class="{'embedded':embedded || ltitool}" class="banner extension">
+    <!-- Generalized Harvard (Summer/Extension agnostic) Header -->
+    <div class="topbar">
+      <div id="topbar-flex">
+        <a href="http://www.harvard.edu/" title="The Harvard University web page">
+          <span class="topbar__logo i-harvard-logo ir">Harvard University</span>
+        </a>
+        <div id="report-a-problem">
+          <a title="Link to Report A Problem Form" href="//cm.dce.harvard.edu/forms/report.shtml?server=MH&amp;offeringId=20160114328">Report A
+            Problem</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ngView: ng-view --><div id="listing-body" data-ng-view="ng-view" class="ng-scope"><div class="container container-fluid pubData ng-scope" data-partial-name="publist">
+  <!-- title section -->
+  <div id="title-section">
+   <!-- ngIf: pubData.series.count == 1 --><div data-ng-if="pubData.series.count == 1" id="dce-series" class="Harvard Extension School">
+     <h1 class="ng-binding">Data Science</h1>
+     <h2><a href="http://isites.harvard.edu/course/ext-14328/2015/fall" title="Go to CSCI E-109 course web site" ng-class="{'embedded':embedded || ltitool}" class="dce-link ng-binding">CSCI E-109</a> Publication Listing</h2>
+     <div> </div>
+   </div><!-- end ngIf: pubData.series.count == 1 -->
+    <!-- ngIf: ltitool -->
+  </div>
+  <!-- ngIf: iAmAdmin -->
+  <!-- System message -->
+  <!-- ngIf: sysMsg.title -->
+  <!-- END system message -->
+  
+  <!-- ngIf: pubMessage -->
+  
+  <!-- ngIf: !pubMessage --><div class="content body ng-scope" data-ng-if="!pubMessage">
+    <div id="sort-menu" data-ng-show="pubData.publications.length > 1">
+      <label for="sort-by">Sorted: </label>
+      <button id="sort-by" title="Change sort order" data-ng-model="orderProp" ng-click="orderProp = { 'dateStart': '-dateStart', '-dateStart':'dateStart'}[orderProp]" class="ng-pristine ng-untouched ng-valid">
+        <div ng-show="orderProp == '-dateStart'">Newest</div>
+        <div ng-show="orderProp == 'dateStart'" class="ng-hide">Oldest</div>
+      </button>
+    </div>
+    <!--Body content-->
+    <div class="test-match-height test-rows test-responsive test-border-box test-margin test-hidden test-border">
+      <div class="items-container">
+        <!-- ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Final Project Presentations (CAPTIONS)" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/b721f1db-9c16-464b-bcd3-3d81e7cd13a1/attachment-12/CSCI_109_presentations_program_12_15_15.jpg" class="thumb" alt="Snap shot of Final Project Presentations (CAPTIONS)" src="https://da4w749qm6awt.cloudfront.net/engage-player/b721f1db-9c16-464b-bcd3-3d81e7cd13a1/attachment-12/CSCI_109_presentations_program_12_15_15.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Final Project Presentations (CAPTIONS)" target="_blank">Final Project Presentations (CAPTIONS)
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="16 Dec 2:30AM" class="pub-date ng-binding">
+                Wed, 16 Dec, 2:30AM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes"></div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">P05</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-P05" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=b721f1db-9c16-464b-bcd3-3d81e7cd13a1" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Final Project Presentations" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/950f5075-951d-4d5c-a515-e961985d88b3/attachment-12/VGA_1450207740_SDI_A_SDI_B.jpg" class="thumb" alt="Snap shot of Final Project Presentations" src="https://da4w749qm6awt.cloudfront.net/engage-player/950f5075-951d-4d5c-a515-e961985d88b3/attachment-12/VGA_1450207740_SDI_A_SDI_B.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Final Project Presentations" target="_blank">Final Project Presentations
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="16 Dec 2:29AM" class="pub-date ng-binding">
+                Wed, 16 Dec, 2:29AM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes"></div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">P05</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-P05" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=950f5075-951d-4d5c-a515-e961985d88b3" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Wrap-up &amp; Outlook (CAPTIONS)" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/32a2d292-50eb-44b0-9f28-a728e515d612/attachment-12/CSCI_109_L25_program_12_03_15.jpg" class="thumb" alt="Snap shot of Wrap-up &amp; Outlook (CAPTIONS)" src="https://da4w749qm6awt.cloudfront.net/engage-player/32a2d292-50eb-44b0-9f28-a728e515d612/attachment-12/CSCI_109_L25_program_12_03_15.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Wrap-up &amp; Outlook (CAPTIONS)" target="_blank">Wrap-up &amp; Outlook (CAPTIONS)
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="04 Dec 2:30AM" class="pub-date ng-binding">
+                Fri, 04 Dec, 2:30AM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes"></div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">L25</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-L25" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=32a2d292-50eb-44b0-9f28-a728e515d612" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Lecture 25" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/67735f84-d3c9-406e-86cd-4bfbb38ef1cd/attachment-12/presenter_delivery.jpg" class="thumb" alt="Snap shot of Lecture 25" src="https://da4w749qm6awt.cloudfront.net/engage-player/67735f84-d3c9-406e-86cd-4bfbb38ef1cd/attachment-12/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Lecture 25" target="_blank">Lecture 25
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="04 Dec 2:29AM" class="pub-date ng-binding">
+                Fri, 04 Dec, 2:29AM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes">Wrap-up &amp; Outlook</div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">L25</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-L25" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=67735f84-d3c9-406e-86cd-4bfbb38ef1cd" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Lecture 24" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/128b8123-a1a6-493c-bac7-a932234374a0/attachment-12/presenter_delivery.jpg" class="thumb" alt="Snap shot of Lecture 24" src="https://da4w749qm6awt.cloudfront.net/engage-player/128b8123-a1a6-493c-bac7-a932234374a0/attachment-12/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Lecture 24" target="_blank">Lecture 24
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="02 Dec 2:29AM" class="pub-date ng-binding">
+                Wed, 02 Dec, 2:29AM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes">Building Data Science</div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">L24</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-L24" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=128b8123-a1a6-493c-bac7-a932234374a0" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Deep Learning.  (CAPTIONS)" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/12bfea44-634f-4bc0-b88d-0aca05a3c289/attachment-12/presenter_delivery.jpg" class="thumb" alt="Snap shot of Deep Learning.  (CAPTIONS)" src="https://da4w749qm6awt.cloudfront.net/engage-player/12bfea44-634f-4bc0-b88d-0aca05a3c289/attachment-12/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Deep Learning.  (CAPTIONS)" target="_blank">Deep Learning.  (CAPTIONS)
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="20 Nov 2:30AM" class="pub-date ng-binding">
+                Fri, 20 Nov, 2:30AM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes"></div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">L23</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-L23" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=12bfea44-634f-4bc0-b88d-0aca05a3c289" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Lecture 23" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/3c8c045a-7b5b-41a1-9b96-9e07a7cfb8f5/attachment-12/presenter_delivery.jpg" class="thumb" alt="Snap shot of Lecture 23" src="https://da4w749qm6awt.cloudfront.net/engage-player/3c8c045a-7b5b-41a1-9b96-9e07a7cfb8f5/attachment-12/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Lecture 23" target="_blank">Lecture 23
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="20 Nov 2:29AM" class="pub-date ng-binding">
+                Fri, 20 Nov, 2:29AM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes">Deep Learning.</div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">L23</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-L23" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=3c8c045a-7b5b-41a1-9b96-9e07a7cfb8f5" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Experimental Design. A/B testing. Tirthankar Dasgupta (CAPTIONS)" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/94e52a8d-6557-48c4-b003-b5ec84d2a1e2/attachment-12/presenter_delivery.jpg" class="thumb" alt="Snap shot of Experimental Design. A/B testing. Tirthankar Dasgupta (CAPTIONS)" src="https://da4w749qm6awt.cloudfront.net/engage-player/94e52a8d-6557-48c4-b003-b5ec84d2a1e2/attachment-12/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Experimental Design. A/B testing. Tirthankar Dasgupta (CAPTIONS)" target="_blank">Experimental Design. A/B testing. Tirthankar Dasgupta (CAPTIONS)
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="18 Nov 2:30AM" class="pub-date ng-binding">
+                Wed, 18 Nov, 2:30AM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes"></div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">L22</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-L22" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=94e52a8d-6557-48c4-b003-b5ec84d2a1e2" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Lecture 22" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/15117337-3199-4265-a39a-9a0c8772b9df/attachment-12/presenter_delivery.jpg" class="thumb" alt="Snap shot of Lecture 22" src="https://da4w749qm6awt.cloudfront.net/engage-player/15117337-3199-4265-a39a-9a0c8772b9df/attachment-12/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Lecture 22" target="_blank">Lecture 22
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="18 Nov 2:29AM" class="pub-date ng-binding">
+                Wed, 18 Nov, 2:29AM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes">Experimental Design. A/B testing.Tirthankar Dasgupta</div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">L22</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-L22" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=15117337-3199-4265-a39a-9a0c8772b9df" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Effective Presentations. (CAPTIONS)" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/34758fd3-9896-4461-966a-7971e349fee3/attachment-12/presenter_delivery.jpg" class="thumb" alt="Snap shot of Effective Presentations. (CAPTIONS)" src="https://da4w749qm6awt.cloudfront.net/engage-player/34758fd3-9896-4461-966a-7971e349fee3/attachment-12/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Effective Presentations. (CAPTIONS)" target="_blank">Effective Presentations. (CAPTIONS)
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="13 Nov 2:30AM" class="pub-date ng-binding">
+                Fri, 13 Nov, 2:30AM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes"></div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">L21</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-L21" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=34758fd3-9896-4461-966a-7971e349fee3" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Lecture 21" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/d213b305-65a8-4ee8-95d3-4dfc4a437205/attachment-12/presenter_delivery.jpg" class="thumb" alt="Snap shot of Lecture 21" src="https://da4w749qm6awt.cloudfront.net/engage-player/d213b305-65a8-4ee8-95d3-4dfc4a437205/attachment-12/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Lecture 21" target="_blank">Lecture 21
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="13 Nov 2:29AM" class="pub-date ng-binding">
+                Fri, 13 Nov, 2:29AM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes">Effective Presentations.</div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">L21</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-L21" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=d213b305-65a8-4ee8-95d3-4dfc4a437205" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Section 10 (CAPTIONS)" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/b1d70f08-4c37-4ca7-9fd1-769f4a5adbd2/attachment-12/presenter_delivery.jpg" class="thumb" alt="Snap shot of Section 10 (CAPTIONS)" src="https://da4w749qm6awt.cloudfront.net/engage-player/b1d70f08-4c37-4ca7-9fd1-769f4a5adbd2/attachment-12/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Section 10 (CAPTIONS)" target="_blank">Section 10 (CAPTIONS)
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="13 Nov 1:00AM" class="pub-date ng-binding">
+                Fri, 13 Nov, 1:00AM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes"></div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">S10</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-S10" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=b1d70f08-4c37-4ca7-9fd1-769f4a5adbd2" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Section 10" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/534829b6-1773-4e1d-b25d-aa2a2fbd2b95/attachment-12/presenter_delivery.jpg" class="thumb" alt="Snap shot of Section 10" src="https://da4w749qm6awt.cloudfront.net/engage-player/534829b6-1773-4e1d-b25d-aa2a2fbd2b95/attachment-12/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Section 10" target="_blank">Section 10
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="13 Nov 12:59AM" class="pub-date ng-binding">
+                Fri, 13 Nov, 12:59AM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes"></div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">S10</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-S10" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=534829b6-1773-4e1d-b25d-aa2a2fbd2b95" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Clustering. k-means. Mean Shift. Hierarchical Clustering.  (CAPTIONS)" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/03277e71-f8f1-443b-b13a-7e54f762b287/attachment-12/presenter_delivery.jpg" class="thumb" alt="Snap shot of Clustering. k-means. Mean Shift. Hierarchical Clustering.  (CAPTIONS)" src="https://da4w749qm6awt.cloudfront.net/engage-player/03277e71-f8f1-443b-b13a-7e54f762b287/attachment-12/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Clustering. k-means. Mean Shift. Hierarchical Clustering.  (CAPTIONS)" target="_blank">Clustering. k-means. Mean Shift. Hierarchical Clustering.  (CAPTIONS)
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="11 Nov 2:30AM" class="pub-date ng-binding">
+                Wed, 11 Nov, 2:30AM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes"></div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">L20</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-L20" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=03277e71-f8f1-443b-b13a-7e54f762b287" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Lecture 20" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/27aebc37-3c53-4ce8-a7cb-b2be397aa2f0/attachment-12/presenter_delivery.jpg" class="thumb" alt="Snap shot of Lecture 20" src="https://da4w749qm6awt.cloudfront.net/engage-player/27aebc37-3c53-4ce8-a7cb-b2be397aa2f0/attachment-12/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Lecture 20" target="_blank">Lecture 20
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="11 Nov 2:29AM" class="pub-date ng-binding">
+                Wed, 11 Nov, 2:29AM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes">Clustering. k-means. Mean Shift. Hierarchical Clustering.</div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">L20</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-L20" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=27aebc37-3c53-4ce8-a7cb-b2be397aa2f0" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Interactive Visualizations. Tableau. (CAPTIONS)" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/5ca8d569-0c51-47aa-83df-147cc4b97e57/attachment-12/presenter_delivery.jpg" class="thumb" alt="Snap shot of Interactive Visualizations. Tableau. (CAPTIONS)" src="https://da4w749qm6awt.cloudfront.net/engage-player/5ca8d569-0c51-47aa-83df-147cc4b97e57/attachment-12/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Interactive Visualizations. Tableau. (CAPTIONS)" target="_blank">Interactive Visualizations. Tableau. (CAPTIONS)
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="06 Nov 2:30AM" class="pub-date ng-binding">
+                Fri, 06 Nov, 2:30AM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes"></div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">L19</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-L19" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=5ca8d569-0c51-47aa-83df-147cc4b97e57" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Lecture 19" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/51e980dd-56a4-4b44-aec5-516ed9c53a2c/attachment-12/presenter_delivery.jpg" class="thumb" alt="Snap shot of Lecture 19" src="https://da4w749qm6awt.cloudfront.net/engage-player/51e980dd-56a4-4b44-aec5-516ed9c53a2c/attachment-12/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Lecture 19" target="_blank">Lecture 19
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="06 Nov 2:29AM" class="pub-date ng-binding">
+                Fri, 06 Nov, 2:29AM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes">Interactive Visualizations. Tableau.</div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">L19</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-L19" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=51e980dd-56a4-4b44-aec5-516ed9c53a2c" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Section 9 (CAPTIONS)" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/3c49a6e1-b9e6-470a-9605-0478f8ec382b/attachment-12/presenter_delivery.jpg" class="thumb" alt="Snap shot of Section 9 (CAPTIONS)" src="https://da4w749qm6awt.cloudfront.net/engage-player/3c49a6e1-b9e6-470a-9605-0478f8ec382b/attachment-12/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Section 9 (CAPTIONS)" target="_blank">Section 9 (CAPTIONS)
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="06 Nov 1:00AM" class="pub-date ng-binding">
+                Fri, 06 Nov, 1:00AM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes"></div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">S09</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-S09" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=3c49a6e1-b9e6-470a-9605-0478f8ec382b" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Section 9" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/52e74ae5-f08b-4bf8-b0a2-b0eeae127856/attachment-12/presenter_delivery.jpg" class="thumb" alt="Snap shot of Section 9" src="https://da4w749qm6awt.cloudfront.net/engage-player/52e74ae5-f08b-4bf8-b0a2-b0eeae127856/attachment-12/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Section 9" target="_blank">Section 9
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="06 Nov 12:59AM" class="pub-date ng-binding">
+                Fri, 06 Nov, 12:59AM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes"></div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">S09</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-S09" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=52e74ae5-f08b-4bf8-b0a2-b0eeae127856" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Text Analysis. LDA. Topic Modeling. (CAPTIONS)" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/432bb538-45a0-41d3-bb4e-f7b81b0fe811/attachment-12/presenter_delivery.jpg" class="thumb" alt="Snap shot of Text Analysis. LDA. Topic Modeling. (CAPTIONS)" src="https://da4w749qm6awt.cloudfront.net/engage-player/432bb538-45a0-41d3-bb4e-f7b81b0fe811/attachment-12/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Text Analysis. LDA. Topic Modeling. (CAPTIONS)" target="_blank">Text Analysis. LDA. Topic Modeling. (CAPTIONS)
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="04 Nov 2:30AM" class="pub-date ng-binding">
+                Wed, 04 Nov, 2:30AM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes"></div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">L18</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-L18" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=432bb538-45a0-41d3-bb4e-f7b81b0fe811" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Lecture 18" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/8b18c591-27e0-4ea9-8834-8bab321b166a/attachment-12/presenter_delivery.jpg" class="thumb" alt="Snap shot of Lecture 18" src="https://da4w749qm6awt.cloudfront.net/engage-player/8b18c591-27e0-4ea9-8834-8bab321b166a/attachment-12/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Lecture 18" target="_blank">Lecture 18
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="04 Nov 2:29AM" class="pub-date ng-binding">
+                Wed, 04 Nov, 2:29AM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes">Text Analysis. LDA. Topic Modeling</div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">L18</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-L18" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=8b18c591-27e0-4ea9-8834-8bab321b166a" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Section 8, extra session (CAPTIONS)" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/d0af29d8-67fc-4e87-8394-a0d266fde6c2/attachment-12/presenter_delivery.jpg" class="thumb" alt="Snap shot of Section 8, extra session (CAPTIONS)" src="https://da4w749qm6awt.cloudfront.net/engage-player/d0af29d8-67fc-4e87-8394-a0d266fde6c2/attachment-12/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Section 8, extra session (CAPTIONS)" target="_blank">Section 8, extra session (CAPTIONS)
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="31 Oct 1:30AM" class="pub-date ng-binding">
+                Sat, 31 Oct, 1:30AM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes"></div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">P03</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-P03" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=d0af29d8-67fc-4e87-8394-a0d266fde6c2" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Section 8, extra session" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/033ddb0d-55c9-4852-8bf1-d73968b20f8e/attachment-12/presenter_delivery.jpg" class="thumb" alt="Snap shot of Section 8, extra session" src="https://da4w749qm6awt.cloudfront.net/engage-player/033ddb0d-55c9-4852-8bf1-d73968b20f8e/attachment-12/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Section 8, extra session" target="_blank">Section 8, extra session
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="31 Oct 1:29AM" class="pub-date ng-binding">
+                Sat, 31 Oct, 1:29AM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes">Section 8, extra session</div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">P04</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-P04" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=033ddb0d-55c9-4852-8bf1-d73968b20f8e" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Advanced Bayesian Thinking. (CAPTIONS)" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/35282cbd-94b3-4fd7-bd5e-b3a8f40e72b1/attachment-12/presenter_delivery.jpg" class="thumb" alt="Snap shot of Advanced Bayesian Thinking. (CAPTIONS)" src="https://da4w749qm6awt.cloudfront.net/engage-player/35282cbd-94b3-4fd7-bd5e-b3a8f40e72b1/attachment-12/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Advanced Bayesian Thinking. (CAPTIONS)" target="_blank">Advanced Bayesian Thinking. (CAPTIONS)
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="30 Oct 1:30AM" class="pub-date ng-binding">
+                Fri, 30 Oct, 1:30AM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes"></div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">L17</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-L17" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=35282cbd-94b3-4fd7-bd5e-b3a8f40e72b1" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Lecture 17" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/e63c650e-4cf6-4bee-b57e-f16e927ba25a/attachment-12/presenter_delivery.jpg" class="thumb" alt="Snap shot of Lecture 17" src="https://da4w749qm6awt.cloudfront.net/engage-player/e63c650e-4cf6-4bee-b57e-f16e927ba25a/attachment-12/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Lecture 17" target="_blank">Lecture 17
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="30 Oct 1:29AM" class="pub-date ng-binding">
+                Fri, 30 Oct, 1:29AM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes">Advanced Bayesian Thinking.</div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">L17</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-L17" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=e63c650e-4cf6-4bee-b57e-f16e927ba25a" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Section 8 (CAPTIONS)" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/7ab74365-fff6-4419-8bb5-7e0a31e4545c/attachment-12/presenter_delivery.jpg" class="thumb" alt="Snap shot of Section 8 (CAPTIONS)" src="https://da4w749qm6awt.cloudfront.net/engage-player/7ab74365-fff6-4419-8bb5-7e0a31e4545c/attachment-12/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Section 8 (CAPTIONS)" target="_blank">Section 8 (CAPTIONS)
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="30 Oct 12:00AM" class="pub-date ng-binding">
+                Fri, 30 Oct, 12:00AM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes"></div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">S08</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-S08" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=7ab74365-fff6-4419-8bb5-7e0a31e4545c" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Section 8" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/2819e79e-d6b9-4988-a0ca-8fc3850ab065/attachment-12/presenter_delivery.jpg" class="thumb" alt="Snap shot of Section 8" src="https://da4w749qm6awt.cloudfront.net/engage-player/2819e79e-d6b9-4988-a0ca-8fc3850ab065/attachment-12/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Section 8" target="_blank">Section 8
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="29 Oct 11:59PM" class="pub-date ng-binding">
+                Thu, 29 Oct, 11:59PM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes"></div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">S08</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-S08" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=2819e79e-d6b9-4988-a0ca-8fc3850ab065" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Bayesian thinking and methods. Prior distributions, likelihood. Naive Bayes. (CAPTIONS)" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/15fcc277-f6f1-4db5-9b8b-f941c49db487/attachment-12/presenter_delivery.jpg" class="thumb" alt="Snap shot of Bayesian thinking and methods. Prior distributions, likelihood. Naive Bayes. (CAPTIONS)" src="https://da4w749qm6awt.cloudfront.net/engage-player/15fcc277-f6f1-4db5-9b8b-f941c49db487/attachment-12/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Bayesian thinking and methods. Prior distributions, likelihood. Naive Bayes. (CAPTIONS)" target="_blank">Bayesian thinking and methods. Prior distributions, likelihood. Naive Bayes. (CAPTIONS)
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="28 Oct 1:30AM" class="pub-date ng-binding">
+                Wed, 28 Oct, 1:30AM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes"></div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">L16</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-L16" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=15fcc277-f6f1-4db5-9b8b-f941c49db487" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Lecture 16" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/233f6c34-306f-481b-8ea5-be33076eb6a8/attachment-12/presenter_delivery.jpg" class="thumb" alt="Snap shot of Lecture 16" src="https://da4w749qm6awt.cloudfront.net/engage-player/233f6c34-306f-481b-8ea5-be33076eb6a8/attachment-12/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Lecture 16" target="_blank">Lecture 16
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="28 Oct 1:29AM" class="pub-date ng-binding">
+                Wed, 28 Oct, 1:29AM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes">Bayesian thinking and methods. Prior distributions, likelihood. Naive Bayes.</div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">L16</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-L16" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=233f6c34-306f-481b-8ea5-be33076eb6a8" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Spark (CAPTIONS)" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/4d529afe-7fe0-42b8-a4d8-50aca797bdcf/attachment-12/presenter_delivery.jpg" class="thumb" alt="Snap shot of Spark (CAPTIONS)" src="https://da4w749qm6awt.cloudfront.net/engage-player/4d529afe-7fe0-42b8-a4d8-50aca797bdcf/attachment-12/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Spark (CAPTIONS)" target="_blank">Spark (CAPTIONS)
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="23 Oct 1:30AM" class="pub-date ng-binding">
+                Fri, 23 Oct, 1:30AM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes"></div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">L15</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-L15" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=4d529afe-7fe0-42b8-a4d8-50aca797bdcf" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Lecture 15" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/10964b32-dcdc-49d2-b766-039b707a5c37/attachment-12/presenter_delivery.jpg" class="thumb" alt="Snap shot of Lecture 15" src="https://da4w749qm6awt.cloudfront.net/engage-player/10964b32-dcdc-49d2-b766-039b707a5c37/attachment-12/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Lecture 15" target="_blank">Lecture 15
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="23 Oct 1:29AM" class="pub-date ng-binding">
+                Fri, 23 Oct, 1:29AM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes">Spark</div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">L15</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-L15" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=10964b32-dcdc-49d2-b766-039b707a5c37" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Section 7 (CAPTIONS)" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/6d41b545-6329-49e7-a2b8-ec0d218a5bc5/attachment-12/presenter_delivery.jpg" class="thumb" alt="Snap shot of Section 7 (CAPTIONS)" src="https://da4w749qm6awt.cloudfront.net/engage-player/6d41b545-6329-49e7-a2b8-ec0d218a5bc5/attachment-12/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Section 7 (CAPTIONS)" target="_blank">Section 7 (CAPTIONS)
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="23 Oct 12:00AM" class="pub-date ng-binding">
+                Fri, 23 Oct, 12:00AM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes"></div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">S07</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-S07" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=6d41b545-6329-49e7-a2b8-ec0d218a5bc5" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Section 7" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/6f1deb9e-051b-4019-99ec-19aee14be9d9/attachment-12/presenter_delivery.jpg" class="thumb" alt="Snap shot of Section 7" src="https://da4w749qm6awt.cloudfront.net/engage-player/6f1deb9e-051b-4019-99ec-19aee14be9d9/attachment-12/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Section 7" target="_blank">Section 7
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="22 Oct 11:59PM" class="pub-date ng-binding">
+                Thu, 22 Oct, 11:59PM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes"></div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">S07</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-S07" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=6f1deb9e-051b-4019-99ec-19aee14be9d9" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Amazon EC2, AWS Datastore, MapReduce (CAPTIONS)" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/4199ca62-a007-4b08-b2e2-f752c2dcc01a/attachment-12/presenter_delivery.jpg" class="thumb" alt="Snap shot of Amazon EC2, AWS Datastore, MapReduce (CAPTIONS)" src="https://da4w749qm6awt.cloudfront.net/engage-player/4199ca62-a007-4b08-b2e2-f752c2dcc01a/attachment-12/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Amazon EC2, AWS Datastore, MapReduce (CAPTIONS)" target="_blank">Amazon EC2, AWS Datastore, MapReduce (CAPTIONS)
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="21 Oct 1:30AM" class="pub-date ng-binding">
+                Wed, 21 Oct, 1:30AM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes"></div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">L14</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-L14" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=4199ca62-a007-4b08-b2e2-f752c2dcc01a" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Lecture 14" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/afee45b9-dcf5-4f29-bc60-871aa78f1cf8/attachment-12/presenter_delivery.jpg" class="thumb" alt="Snap shot of Lecture 14" src="https://da4w749qm6awt.cloudfront.net/engage-player/afee45b9-dcf5-4f29-bc60-871aa78f1cf8/attachment-12/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Lecture 14" target="_blank">Lecture 14
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="21 Oct 1:29AM" class="pub-date ng-binding">
+                Wed, 21 Oct, 1:29AM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes">Amazon EC2, AWS Datastore, MapReduce</div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">L14</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-L14" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=afee45b9-dcf5-4f29-bc60-871aa78f1cf8" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Machine Learning Best Practices. Similarities, recommendations. (CAPTIONS)" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/3d4f72cf-9de9-4d07-bc80-cd0f0ab6b82d/attachment-10/presenter_delivery.jpg" class="thumb" alt="Snap shot of Machine Learning Best Practices. Similarities, recommendations. (CAPTIONS)" src="https://da4w749qm6awt.cloudfront.net/engage-player/3d4f72cf-9de9-4d07-bc80-cd0f0ab6b82d/attachment-10/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Machine Learning Best Practices. Similarities, recommendations. (CAPTIONS)" target="_blank">Machine Learning Best Practices. Similarities, recommendations. (CAPTIONS)
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="16 Oct 1:30AM" class="pub-date ng-binding">
+                Fri, 16 Oct, 1:30AM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes"></div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">L13</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-L13" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=3d4f72cf-9de9-4d07-bc80-cd0f0ab6b82d" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Lecture 13" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/b33eec92-d049-4353-a904-5054eb718aff/attachment-12/presenter_delivery.jpg" class="thumb" alt="Snap shot of Lecture 13" src="https://da4w749qm6awt.cloudfront.net/engage-player/b33eec92-d049-4353-a904-5054eb718aff/attachment-12/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Lecture 13" target="_blank">Lecture 13
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="16 Oct 1:29AM" class="pub-date ng-binding">
+                Fri, 16 Oct, 1:29AM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes">Machine Learning Best Practices. Similarities, recommendations.</div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">L13</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-L13" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=b33eec92-d049-4353-a904-5054eb718aff" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Fully solved example using a telecom churn dataset. (CAPTIONS)" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/3dfcfa72-4dad-47fd-b0d7-b72867a3ec87/attachment-12/presenter_delivery.jpg" class="thumb" alt="Snap shot of Fully solved example using a telecom churn dataset. (CAPTIONS)" src="https://da4w749qm6awt.cloudfront.net/engage-player/3dfcfa72-4dad-47fd-b0d7-b72867a3ec87/attachment-12/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Fully solved example using a telecom churn dataset. (CAPTIONS)" target="_blank">Fully solved example using a telecom churn dataset. (CAPTIONS)
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="16 Oct 12:00AM" class="pub-date ng-binding">
+                Fri, 16 Oct, 12:00AM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes"></div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">S06</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-S06" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=3dfcfa72-4dad-47fd-b0d7-b72867a3ec87" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Section 6" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/0c645a5c-d262-4bb5-a137-3a78db60f3e7/attachment-12/presenter_delivery.jpg" class="thumb" alt="Snap shot of Section 6" src="https://da4w749qm6awt.cloudfront.net/engage-player/0c645a5c-d262-4bb5-a137-3a78db60f3e7/attachment-12/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Section 6" target="_blank">Section 6
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="15 Oct 11:59PM" class="pub-date ng-binding">
+                Thu, 15 Oct, 11:59PM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes"></div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">S06</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-S06" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=0c645a5c-d262-4bb5-a137-3a78db60f3e7" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Ensemble Methods. Bagging. Boosting. (CAPTIONS)" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/6f374ba5-6e54-432c-9916-fb61fa2327ef/attachment-12/presenter_delivery.jpg" class="thumb" alt="Snap shot of Ensemble Methods. Bagging. Boosting. (CAPTIONS)" src="https://da4w749qm6awt.cloudfront.net/engage-player/6f374ba5-6e54-432c-9916-fb61fa2327ef/attachment-12/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Ensemble Methods. Bagging. Boosting. (CAPTIONS)" target="_blank">Ensemble Methods. Bagging. Boosting. (CAPTIONS)
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="14 Oct 1:30AM" class="pub-date ng-binding">
+                Wed, 14 Oct, 1:30AM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes"></div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">L12</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-L12" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=6f374ba5-6e54-432c-9916-fb61fa2327ef" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Lecture 12" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/4831ebf0-7832-42c5-9339-5b5e08dd3e92/attachment-12/presenter_delivery.jpg" class="thumb" alt="Snap shot of Lecture 12" src="https://da4w749qm6awt.cloudfront.net/engage-player/4831ebf0-7832-42c5-9339-5b5e08dd3e92/attachment-12/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Lecture 12" target="_blank">Lecture 12
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="14 Oct 1:29AM" class="pub-date ng-binding">
+                Wed, 14 Oct, 1:29AM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes">Ensemble Methods. Bagging. Boosting.</div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">L12</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-L12" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=4831ebf0-7832-42c5-9339-5b5e08dd3e92" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Section 5, Part 2 (CAPTIONS)" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/2a006499-49a7-4e2e-b5d8-bfa7a9510132/attachment-12/presenter_delivery.jpg" class="thumb" alt="Snap shot of Section 5, Part 2 (CAPTIONS)" src="https://da4w749qm6awt.cloudfront.net/engage-player/2a006499-49a7-4e2e-b5d8-bfa7a9510132/attachment-12/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Section 5, Part 2 (CAPTIONS)" target="_blank">Section 5, Part 2 (CAPTIONS)
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="10 Oct 12:00AM" class="pub-date ng-binding">
+                Sat, 10 Oct, 12:00AM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes"></div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">P03</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-P03" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=2a006499-49a7-4e2e-b5d8-bfa7a9510132" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Section 5 supplement" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/4676adde-557f-469b-bca8-5ffe868094eb/attachment-12/presenter_delivery.jpg" class="thumb" alt="Snap shot of Section 5 supplement" src="https://da4w749qm6awt.cloudfront.net/engage-player/4676adde-557f-469b-bca8-5ffe868094eb/attachment-12/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Section 5 supplement" target="_blank">Section 5 supplement
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="09 Oct 11:59PM" class="pub-date ng-binding">
+                Fri, 09 Oct, 11:59PM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes"></div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">P03</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-P03" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=4676adde-557f-469b-bca8-5ffe868094eb" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Decision Trees. Random Forests.  (CAPTIONS)" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/c22cbde8-94dd-42ad-86ef-091448ad02e4/attachment-12/presenter_delivery.jpg" class="thumb" alt="Snap shot of Decision Trees. Random Forests.  (CAPTIONS)" src="https://da4w749qm6awt.cloudfront.net/engage-player/c22cbde8-94dd-42ad-86ef-091448ad02e4/attachment-12/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Decision Trees. Random Forests.  (CAPTIONS)" target="_blank">Decision Trees. Random Forests.  (CAPTIONS)
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="09 Oct 1:30AM" class="pub-date ng-binding">
+                Fri, 09 Oct, 1:30AM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes"></div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">L11</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-L11" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=c22cbde8-94dd-42ad-86ef-091448ad02e4" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Lecture 11" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/8892a8b7-25eb-4bc5-80b6-47b9cf681a05/attachment-12/presenter_delivery.jpg" class="thumb" alt="Snap shot of Lecture 11" src="https://da4w749qm6awt.cloudfront.net/engage-player/8892a8b7-25eb-4bc5-80b6-47b9cf681a05/attachment-12/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Lecture 11" target="_blank">Lecture 11
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="09 Oct 1:29AM" class="pub-date ng-binding">
+                Fri, 09 Oct, 1:29AM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes">Decision Trees. Random Forests.</div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">L11</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-L11" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=8892a8b7-25eb-4bc5-80b6-47b9cf681a05" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Bias/Variance in regression and classification. Regularization and Feature Selection. (CAPTIONS)" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/8ce7995a-c374-4946-b01f-c8d7b0d2614b/attachment-12/presenter_delivery.jpg" class="thumb" alt="Snap shot of Bias/Variance in regression and classification. Regularization and Feature Selection. (CAPTIONS)" src="https://da4w749qm6awt.cloudfront.net/engage-player/8ce7995a-c374-4946-b01f-c8d7b0d2614b/attachment-12/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Bias/Variance in regression and classification. Regularization and Feature Selection. (CAPTIONS)" target="_blank">Bias/Variance in regression and classification. Regularization and Feature Selection. (CAPTIONS)
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="09 Oct 12:00AM" class="pub-date ng-binding">
+                Fri, 09 Oct, 12:00AM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes"></div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">S05</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-S05" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=8ce7995a-c374-4946-b01f-c8d7b0d2614b" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Section 5" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/83dfe4c9-fa1b-429c-a84c-839195fbede8/attachment-12/presenter_delivery.jpg" class="thumb" alt="Snap shot of Section 5" src="https://da4w749qm6awt.cloudfront.net/engage-player/83dfe4c9-fa1b-429c-a84c-839195fbede8/attachment-12/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Section 5" target="_blank">Section 5
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="08 Oct 11:59PM" class="pub-date ng-binding">
+                Thu, 08 Oct, 11:59PM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes">Bias/Variance in regression and classification. Regularization and Feature Selection.</div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">S05</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-S05" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=83dfe4c9-fa1b-429c-a84c-839195fbede8" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Support Vector Machines (SVM). Performance Evaluation (PR, ROC) (CAPTIONS)" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/92e3adbf-2212-4cff-b1a9-b1bfe72d93bf/attachment-12/presenter_delivery.jpg" class="thumb" alt="Snap shot of Support Vector Machines (SVM). Performance Evaluation (PR, ROC) (CAPTIONS)" src="https://da4w749qm6awt.cloudfront.net/engage-player/92e3adbf-2212-4cff-b1a9-b1bfe72d93bf/attachment-12/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Support Vector Machines (SVM). Performance Evaluation (PR, ROC) (CAPTIONS)" target="_blank">Support Vector Machines (SVM). Performance Evaluation (PR, ROC) (CAPTIONS)
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="07 Oct 1:30AM" class="pub-date ng-binding">
+                Wed, 07 Oct, 1:30AM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes"></div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">L10</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-L10" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=92e3adbf-2212-4cff-b1a9-b1bfe72d93bf" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Lecture 10" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/f21fcc8f-93a8-49f6-9ff8-0f339b0728bd/attachment-12/presenter_delivery.jpg" class="thumb" alt="Snap shot of Lecture 10" src="https://da4w749qm6awt.cloudfront.net/engage-player/f21fcc8f-93a8-49f6-9ff8-0f339b0728bd/attachment-12/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Lecture 10" target="_blank">Lecture 10
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="07 Oct 1:29AM" class="pub-date ng-binding">
+                Wed, 07 Oct, 1:29AM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes">Support Vector Machines. Performance Evaluation</div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">L10</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-L10" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=f21fcc8f-93a8-49f6-9ff8-0f339b0728bd" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Section 4, part 2 (CAPTIONS)" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/8003c1bc-80a3-44f0-a578-21a5985810f8/attachment-12/presenter_delivery.jpg" class="thumb" alt="Snap shot of Section 4, part 2 (CAPTIONS)" src="https://da4w749qm6awt.cloudfront.net/engage-player/8003c1bc-80a3-44f0-a578-21a5985810f8/attachment-12/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Section 4, part 2 (CAPTIONS)" target="_blank">Section 4, part 2 (CAPTIONS)
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="03 Oct 12:00AM" class="pub-date ng-binding">
+                Sat, 03 Oct, 12:00AM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes"></div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">P02</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-P02" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=8003c1bc-80a3-44f0-a578-21a5985810f8" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Section 4 supplement" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/90e73c64-855c-4b06-afb2-94da608ecfbf/attachment-12/presenter_delivery.jpg" class="thumb" alt="Snap shot of Section 4 supplement" src="https://da4w749qm6awt.cloudfront.net/engage-player/90e73c64-855c-4b06-afb2-94da608ecfbf/attachment-12/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Section 4 supplement" target="_blank">Section 4 supplement
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="02 Oct 11:59PM" class="pub-date ng-binding">
+                Fri, 02 Oct, 11:59PM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes">Section 4, part 2</div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">P02</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-P02" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=90e73c64-855c-4b06-afb2-94da608ecfbf" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Classification. kNN. Cross Validation. Dimensionality Reduction. PCA. MDS. (CAPTIONS)" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/0ea5e572-f2da-4f3f-b54b-df4edf9a1106/attachment-12/presenter_delivery.jpg" class="thumb" alt="Snap shot of Classification. kNN. Cross Validation. Dimensionality Reduction. PCA. MDS. (CAPTIONS)" src="https://da4w749qm6awt.cloudfront.net/engage-player/0ea5e572-f2da-4f3f-b54b-df4edf9a1106/attachment-12/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Classification. kNN. Cross Validation. Dimensionality Reduction. PCA. MDS. (CAPTIONS)" target="_blank">Classification. kNN. Cross Validation. Dimensionality Reduction. PCA. MDS. (CAPTIONS)
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="02 Oct 1:30AM" class="pub-date ng-binding">
+                Fri, 02 Oct, 1:30AM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes"></div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">L09</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-L09" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=0ea5e572-f2da-4f3f-b54b-df4edf9a1106" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Lecture 9" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/c322c0d5-9cf9-4deb-b59f-d6741064ba8a/attachment-12/presenter_delivery.jpg" class="thumb" alt="Snap shot of Lecture 9" src="https://da4w749qm6awt.cloudfront.net/engage-player/c322c0d5-9cf9-4deb-b59f-d6741064ba8a/attachment-12/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Lecture 9" target="_blank">Lecture 9
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="02 Oct 1:29AM" class="pub-date ng-binding">
+                Fri, 02 Oct, 1:29AM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes">Classification. kNN. Cross Validation. Dimensionality Reduction. PCA. MDS.</div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">L09</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-L09" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=c322c0d5-9cf9-4deb-b59f-d6741064ba8a" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for SciKit Learn, Regression, Logistic Regression (CAPTIONS)" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/cdb6ae4c-a4ea-434d-a0c3-cdff3c2cd645/attachment-12/presenter_delivery.jpg" class="thumb" alt="Snap shot of SciKit Learn, Regression, Logistic Regression (CAPTIONS)" src="https://da4w749qm6awt.cloudfront.net/engage-player/cdb6ae4c-a4ea-434d-a0c3-cdff3c2cd645/attachment-12/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for SciKit Learn, Regression, Logistic Regression (CAPTIONS)" target="_blank">SciKit Learn, Regression, Logistic Regression (CAPTIONS)
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="02 Oct 12:00AM" class="pub-date ng-binding">
+                Fri, 02 Oct, 12:00AM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes"></div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">S04</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-S04" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=cdb6ae4c-a4ea-434d-a0c3-cdff3c2cd645" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Section 4" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/e509f996-9633-4b75-a48a-e29246a316db/attachment-12/presenter_delivery.jpg" class="thumb" alt="Snap shot of Section 4" src="https://da4w749qm6awt.cloudfront.net/engage-player/e509f996-9633-4b75-a48a-e29246a316db/attachment-12/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Section 4" target="_blank">Section 4
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="01 Oct 11:59PM" class="pub-date ng-binding">
+                Thu, 01 Oct, 11:59PM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes">SciKit Learn, Regression, Logistic Regression</div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">S04</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-S04" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=e509f996-9633-4b75-a48a-e29246a316db" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for LASSO. Regularization. Bias and sampling. Bias-variance tradeoff. Overfitting. (CAPTIONS)" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/4012362e-1090-47e3-904b-7e835f57d77b/attachment-12/presenter_delivery.jpg" class="thumb" alt="Snap shot of LASSO. Regularization. Bias and sampling. Bias-variance tradeoff. Overfitting. (CAPTIONS)" src="https://da4w749qm6awt.cloudfront.net/engage-player/4012362e-1090-47e3-904b-7e835f57d77b/attachment-12/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for LASSO. Regularization. Bias and sampling. Bias-variance tradeoff. Overfitting. (CAPTIONS)" target="_blank">LASSO. Regularization. Bias and sampling. Bias-variance tradeoff. Overfitting. (CAPTIONS)
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="30 Sep 1:30AM" class="pub-date ng-binding">
+                Wed, 30 Sep, 1:30AM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes"></div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">L08</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-L08" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=4012362e-1090-47e3-904b-7e835f57d77b" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Lecture 8" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/664f668e-e008-4f44-8600-e09ee6d629b0/attachment-12/presenter_delivery.jpg" class="thumb" alt="Snap shot of Lecture 8" src="https://da4w749qm6awt.cloudfront.net/engage-player/664f668e-e008-4f44-8600-e09ee6d629b0/attachment-12/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Lecture 8" target="_blank">Lecture 8
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="30 Sep 1:29AM" class="pub-date ng-binding">
+                Wed, 30 Sep, 1:29AM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes">LASSO. Regularization. Bias &amp; sampling. Bias-variance tradeoff. Etc.</div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">L08</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-L08" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=664f668e-e008-4f44-8600-e09ee6d629b0" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Linear regression. Logistic regression. (CAPTIONS)" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/b2ac047a-ff65-4926-bd4a-77fdf1c63e0f/attachment-12/presenter_delivery.jpg" class="thumb" alt="Snap shot of Linear regression. Logistic regression. (CAPTIONS)" src="https://da4w749qm6awt.cloudfront.net/engage-player/b2ac047a-ff65-4926-bd4a-77fdf1c63e0f/attachment-12/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Linear regression. Logistic regression. (CAPTIONS)" target="_blank">Linear regression. Logistic regression. (CAPTIONS)
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="25 Sep 1:30AM" class="pub-date ng-binding">
+                Fri, 25 Sep, 1:30AM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes"></div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">L07</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-L07" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=b2ac047a-ff65-4926-bd4a-77fdf1c63e0f" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Lecture 7" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/afe70053-b8b7-43d3-9c2f-f482f479baf7/attachment-12/presenter_delivery.jpg" class="thumb" alt="Snap shot of Lecture 7" src="https://da4w749qm6awt.cloudfront.net/engage-player/afe70053-b8b7-43d3-9c2f-f482f479baf7/attachment-12/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Lecture 7" target="_blank">Lecture 7
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="25 Sep 1:29AM" class="pub-date ng-binding">
+                Fri, 25 Sep, 1:29AM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes">Linear regression. Logistic regression.</div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">L07</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-L07" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=afe70053-b8b7-43d3-9c2f-f482f479baf7" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Pandas in 2D and stats (CAPTIONS)" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/145018c2-260e-47dc-b965-bfdfafacd4e9/attachment-12/presenter_delivery.jpg" class="thumb" alt="Snap shot of Pandas in 2D and stats (CAPTIONS)" src="https://da4w749qm6awt.cloudfront.net/engage-player/145018c2-260e-47dc-b965-bfdfafacd4e9/attachment-12/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Pandas in 2D and stats (CAPTIONS)" target="_blank">Pandas in 2D and stats (CAPTIONS)
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="25 Sep 12:00AM" class="pub-date ng-binding">
+                Fri, 25 Sep, 12:00AM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes"></div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">S03</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-S03" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=145018c2-260e-47dc-b965-bfdfafacd4e9" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Section 3" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/483c8b93-3700-4ee8-80ed-aad7f3da7ac2/attachment-12/presenter_delivery.jpg" class="thumb" alt="Snap shot of Section 3" src="https://da4w749qm6awt.cloudfront.net/engage-player/483c8b93-3700-4ee8-80ed-aad7f3da7ac2/attachment-12/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Section 3" target="_blank">Section 3
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="24 Sep 11:59PM" class="pub-date ng-binding">
+                Thu, 24 Sep, 11:59PM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes">Pandas in 2D and stats</div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">S03</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-S03" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=483c8b93-3700-4ee8-80ed-aad7f3da7ac2" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Effective Communication. Writing Reports (CAPTIONS)" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/697ce8bd-a41c-45d4-8201-5e0dcc8a518c/attachment-12/presenter_delivery.jpg" class="thumb" alt="Snap shot of Effective Communication. Writing Reports (CAPTIONS)" src="https://da4w749qm6awt.cloudfront.net/engage-player/697ce8bd-a41c-45d4-8201-5e0dcc8a518c/attachment-12/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Effective Communication. Writing Reports (CAPTIONS)" target="_blank">Effective Communication. Writing Reports (CAPTIONS)
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="23 Sep 1:30AM" class="pub-date ng-binding">
+                Wed, 23 Sep, 1:30AM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes"></div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">L06</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-L06" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=697ce8bd-a41c-45d4-8201-5e0dcc8a518c" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Lecture 6" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/7f968df9-404a-46a2-ae5f-e35479875f95/attachment-12/presenter_delivery.jpg" class="thumb" alt="Snap shot of Lecture 6" src="https://da4w749qm6awt.cloudfront.net/engage-player/7f968df9-404a-46a2-ae5f-e35479875f95/attachment-12/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Lecture 6" target="_blank">Lecture 6
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="23 Sep 1:29AM" class="pub-date ng-binding">
+                Wed, 23 Sep, 1:29AM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes">Effective Communication. Writing Reports</div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">L06</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-L06" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=7f968df9-404a-46a2-ae5f-e35479875f95" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Probability review. Statistical models. Parametric and nonparametric methods. Bootstrap. Cross Validation. (CAPTIONS)" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/afee98e6-4ca0-4319-9336-fbae46755f1a/attachment-12/presenter_delivery.jpg" class="thumb" alt="Snap shot of Probability review. Statistical models. Parametric and nonparametric methods. Bootstrap. Cross Validation. (CAPTIONS)" src="https://da4w749qm6awt.cloudfront.net/engage-player/afee98e6-4ca0-4319-9336-fbae46755f1a/attachment-12/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Probability review. Statistical models. Parametric and nonparametric methods. Bootstrap. Cross Validation. (CAPTIONS)" target="_blank">Probability review. Statistical models. Parametric and nonparametric methods. Bootstrap. Cross Validation. (CAPTIONS)
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="18 Sep 1:30AM" class="pub-date ng-binding">
+                Fri, 18 Sep, 1:30AM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes"></div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">L05</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-L05" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=afee98e6-4ca0-4319-9336-fbae46755f1a" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Lecture 5" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/873964c6-d345-4f46-a8bc-727b96432d63/attachment-9/presenter_delivery.jpg" class="thumb" alt="Snap shot of Lecture 5" src="https://da4w749qm6awt.cloudfront.net/engage-player/873964c6-d345-4f46-a8bc-727b96432d63/attachment-9/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Lecture 5" target="_blank">Lecture 5
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="18 Sep 1:29AM" class="pub-date ng-binding">
+                Fri, 18 Sep, 1:29AM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes">, Probability review. Statistical models. Parametric and nonparametric methods. Bootstrap. Cross Validation.</div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">L05</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-L05" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=873964c6-d345-4f46-a8bc-727b96432d63" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Scraping and Pandas in 1D (CAPTIONS)" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/3cd5e34b-803f-4f64-ba25-95b67797daad/attachment-12/presenter_delivery.jpg" class="thumb" alt="Snap shot of Scraping and Pandas in 1D (CAPTIONS)" src="https://da4w749qm6awt.cloudfront.net/engage-player/3cd5e34b-803f-4f64-ba25-95b67797daad/attachment-12/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Scraping and Pandas in 1D (CAPTIONS)" target="_blank">Scraping and Pandas in 1D (CAPTIONS)
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="18 Sep 12:00AM" class="pub-date ng-binding">
+                Fri, 18 Sep, 12:00AM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes"></div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">S02</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-S02" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=3cd5e34b-803f-4f64-ba25-95b67797daad" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Section 2" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/8af4418a-7f5b-4738-9c72-6fc2ba1fc499/attachment-9/presenter_delivery.jpg" class="thumb" alt="Snap shot of Section 2" src="https://da4w749qm6awt.cloudfront.net/engage-player/8af4418a-7f5b-4738-9c72-6fc2ba1fc499/attachment-9/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Section 2" target="_blank">Section 2
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="17 Sep 11:59PM" class="pub-date ng-binding">
+                Thu, 17 Sep, 11:59PM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes">Scraping and Pandas in 1D</div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">S02</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-S02" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=8af4418a-7f5b-4738-9c72-6fc2ba1fc499" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Introduction to Databases. SQL. More Pandas. (CAPTIONS)" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/cf9c4d5f-fe87-48cc-bd45-3da212b39a95/attachment-9/presenter_delivery.jpg" class="thumb" alt="Snap shot of Introduction to Databases. SQL. More Pandas. (CAPTIONS)" src="https://da4w749qm6awt.cloudfront.net/engage-player/cf9c4d5f-fe87-48cc-bd45-3da212b39a95/attachment-9/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Introduction to Databases. SQL. More Pandas. (CAPTIONS)" target="_blank">Introduction to Databases. SQL. More Pandas. (CAPTIONS)
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="16 Sep 1:30AM" class="pub-date ng-binding">
+                Wed, 16 Sep, 1:30AM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes"></div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">L04</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-L04" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=cf9c4d5f-fe87-48cc-bd45-3da212b39a95" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Introduction to Databases. SQL. More Pandas." target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/f8a832cb-56e7-401b-b485-aec3c9928069/attachment-9/presenter_delivery.jpg" class="thumb" alt="Snap shot of Introduction to Databases. SQL. More Pandas." src="https://da4w749qm6awt.cloudfront.net/engage-player/f8a832cb-56e7-401b-b485-aec3c9928069/attachment-9/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Introduction to Databases. SQL. More Pandas." target="_blank">Introduction to Databases. SQL. More Pandas.
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="16 Sep 1:30AM" class="pub-date ng-binding">
+                Wed, 16 Sep, 1:30AM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes"></div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">L04</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-L04" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=f8a832cb-56e7-401b-b485-aec3c9928069" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Exploratory Data Analysis. Effective Visualizations. (CAPTIONS)" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/4dc7719e-1ef4-4ee5-a9d9-fc48c3e13185/attachment-9/presenter_delivery.jpg" class="thumb" alt="Snap shot of Exploratory Data Analysis. Effective Visualizations. (CAPTIONS)" src="https://da4w749qm6awt.cloudfront.net/engage-player/4dc7719e-1ef4-4ee5-a9d9-fc48c3e13185/attachment-9/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Exploratory Data Analysis. Effective Visualizations. (CAPTIONS)" target="_blank">Exploratory Data Analysis. Effective Visualizations. (CAPTIONS)
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="15 Sep 1:30AM" class="pub-date ng-binding">
+                Tue, 15 Sep, 1:30AM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes"></div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">L03</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-L03" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=4dc7719e-1ef4-4ee5-a9d9-fc48c3e13185" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Exploratory Data Analysis. Effective Visualizations." target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/a4e81697-fd86-415c-9b29-c14ea7ec15f2/attachment-9/presenter_delivery.jpg" class="thumb" alt="Snap shot of Exploratory Data Analysis. Effective Visualizations." src="https://da4w749qm6awt.cloudfront.net/engage-player/a4e81697-fd86-415c-9b29-c14ea7ec15f2/attachment-9/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Exploratory Data Analysis. Effective Visualizations." target="_blank">Exploratory Data Analysis. Effective Visualizations.
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="11 Sep 1:30AM" class="pub-date ng-binding">
+                Fri, 11 Sep, 1:30AM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes"></div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">L03</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-L03" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=a4e81697-fd86-415c-9b29-c14ea7ec15f2" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Section 1 (CAPTIONS)" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/62b95e14-c296-44da-9691-446dfa313836/attachment-8/presenter_delivery.jpg" class="thumb" alt="Snap shot of Section 1 (CAPTIONS)" src="https://da4w749qm6awt.cloudfront.net/engage-player/62b95e14-c296-44da-9691-446dfa313836/attachment-8/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Section 1 (CAPTIONS)" target="_blank">Section 1 (CAPTIONS)
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="11 Sep 12:00AM" class="pub-date ng-binding">
+                Fri, 11 Sep, 12:00AM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes"></div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">S01</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-S01" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=62b95e14-c296-44da-9691-446dfa313836" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Section 1" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/b89de485-9e30-4783-9287-23701c5f95f7/attachment-9/presenter_delivery.jpg" class="thumb" alt="Snap shot of Section 1" src="https://da4w749qm6awt.cloudfront.net/engage-player/b89de485-9e30-4783-9287-23701c5f95f7/attachment-9/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Section 1" target="_blank">Section 1
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="10 Sep 11:59PM" class="pub-date ng-binding">
+                Thu, 10 Sep, 11:59PM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes"></div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">S01</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-S01" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=b89de485-9e30-4783-9287-23701c5f95f7" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for Web Scraping. Regular Expressions. Data Reshaping. Data Cleanup. Pandas" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/f7ff1893-fbf7-4909-b44e-12e61a98a677/attachment-9/presenter_delivery.jpg" class="thumb" alt="Snap shot of Web Scraping. Regular Expressions. Data Reshaping. Data Cleanup. Pandas" src="https://da4w749qm6awt.cloudfront.net/engage-player/f7ff1893-fbf7-4909-b44e-12e61a98a677/attachment-9/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for Web Scraping. Regular Expressions. Data Reshaping. Data Cleanup. Pandas" target="_blank">Web Scraping. Regular Expressions. Data Reshaping. Data Cleanup. Pandas
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="09 Sep 1:30AM" class="pub-date ng-binding">
+                Wed, 09 Sep, 1:30AM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes"></div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">L02</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-L02" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=f7ff1893-fbf7-4909-b44e-12e61a98a677" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) --><div class="item ng-scope" data-pub-item="data-pub-item" data-ng-repeat="pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query )">
+          <div class="item-element item-img auto-launch" title="launch video for First Week Collective Section (SD version has Captions)" target="_blank">
+            <img data-item-pub="pub" data-ng-src="https://da4w749qm6awt.cloudfront.net/engage-player/e15f221c-5275-4f7f-b486-759a7d483bc8/attachment-9/presenter_delivery.jpg" class="thumb" alt="Snap shot of First Week Collective Section (SD version has Captions)" src="https://da4w749qm6awt.cloudfront.net/engage-player/e15f221c-5275-4f7f-b486-759a7d483bc8/attachment-9/presenter_delivery.jpg">
+          </div>
+          <div class="item-text">
+            <div class="publication-details item-element">
+              <!-- ngIf: showPubSeries -->
+              <div data-item-pub="pub" class="publication-title auto-launch" title="launch video for First Week Collective Section (SD version has Captions)" target="_blank">First Week Collective Section (SD version has Captions)
+                <!-- ngIf: pub.pubLabel -->
+              </div>
+              <div data-date-time="04 Sep 8:59PM" class="pub-date ng-binding">
+                Fri, 04 Sep, 8:59PM </div>
+              <div class="item-details ng-binding" data-ng-bind-html="pub.notes">First Week Collective Session</div>
+              <span data-ng-attr-class="{{!iAmAdmin &amp;&amp; 'hideMe' || 'displayMe' }}" class="hideMe">P01</span>
+              <!-- ngRepeat: link in pub.links --><div class="publication-link type-P01" data-ng-repeat="link in pub.links ">
+                <a class="item-link   " data-is-default-link="true" href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=e15f221c-5275-4f7f-b486-759a7d483bc8" target="_blank"> 
+                    <!-- ngIf: link.liveStart -->
+                </a>
+              </div><!-- end ngRepeat: link in pub.links -->
+            </div>
+          </div>
+        </div><!-- end ngRepeat: pub in filteredPubs = (pubData.publications | orderBy:['-isLive', orderProp, '-dcType'] | pubLinkFilter:servertime | filter:query ) -->
+      </div>
+      <span ng-bind="setNoPubMessage(filteredPubs.length)" class="ng-binding"></span>
+    </div>
+  </div><!-- end ngIf: !pubMessage -->
+</div>
+</div>
+  <div id="footer" data-ng-class="{'embedded':embedded || ltitool}">
+    <div>
+    <div id="footer-privacy">
+      <a title="Privacy policy" href="http://www.extension.harvard.edu/privacy-policy">Privacy Policy</a>
+      &nbsp;|&nbsp; <a title="Terms of Use" href="#/tos">Terms of Use</a>
+    </div>
+    <div id="footer-copyright"> ©<span id="copyright-year">2017</span> President and Fellows of Harvard College</div>
+    </div>
+  </div>
+  <!-- END #footer -->
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+  <div style="display:none" data-app-version="app-version">1.1.0</div>
+  <script src="combined/bower_components/angular/angular.js"></script>
+  <script src="combined/bower_components/angular-route/angular-route.js"></script>
+  <script src="combined/bower_components/angular-resource/angular-resource.js"></script>
+  <script src="combined/bower_components/angular-sanitize/angular-sanitize.js"></script>
+  <script src="combined/bower_components/moment/moment.js"></script>
+  <script src="combined/bower_components/moment-timezone/moment-timezone-with-data-2010-2020.js"></script>
+  <script src="combined/app.js"></script>
+  <script src="combined/views/seriesview/seriesview.js"></script>
+  <script src="combined/views/publistview/publistview.js"></script>
+  <script src="combined/components/version/version.js"></script>
+  <script src="combined/components/version/version-directive.js"></script>
+  <script src="combined/components/version/interpolate-filter.js"></script>
+  <script type="text/javascript" src="combined/components/combojs/services.js"></script>
+  <script type="text/javascript" src="combined/components/combojs/liveFilter.js"></script>
+  <script type="text/javascript" src="combined/components/combojs/liveTimerDirective.js"></script>
+  <script type="text/javascript" src="combined/components/combojs/refreshService.js"></script>
+  <script type="text/javascript" src="combined/components/combojs/dataTransformService.js"></script>
+  <script type="text/javascript">
+    var copyrightyear = document.getElementById('copyright-year');
+    if (copyrightyear) {
+      copyrightyear.innerHTML = new Date().getFullYear();
+    }
+  </script>
+
+
+</body>
